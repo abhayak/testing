@@ -1,0 +1,26 @@
+<app-header></app-header>
+<!-- <p>work product list</p> -->
+<!-- <ul>    
+    <li *ngFor='let dame of dmidata.employees' (click)="ftch(dame)">  {{dame.name}}</li>
+</ul> -->
+<app-onefetch [setdataE]="onedetails"></app-onefetch>
+<hr>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of damidata">
+        <td>{{d.first_name}}</td>
+        <td>{{d.last_name}}</td>
+        <td>{{d.email}}</td>
+        <td><button type="button" class="btn btn-info" (click)="info(d)">Info</button></td>
+      </tr>
+  
+    </tbody>
+  </table>
